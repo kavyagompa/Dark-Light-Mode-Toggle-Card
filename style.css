@@ -1,0 +1,146 @@
+/* Variables for light mode */
+:root {
+  --bg:      #f0f2f5;
+  --card:    #ffffff;
+  --text:    #1a1a2e;
+  --muted:   #666680;
+  --accent:  #6c63ff;
+  --tag-bg:  #efefff;
+  --border:  #ddddf0;
+}
+
+/* Dark mode — applied when body has .dark class */
+body.dark {
+  --bg:      #0d0d14;
+  --card:    #13131f;
+  --text:    #e6e6f5;
+  --muted:   #8888aa;
+  --accent:  #8b83ff;
+  --tag-bg:  #1e1e30;
+  --border:  #2a2a40;
+}
+
+/* Base */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: var(--bg);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: sans-serif;
+  transition: background 0.4s ease;
+}
+
+/* Toggle button */
+.toggle-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 8px 18px;
+  border-radius: 30px;
+  border: 1px solid var(--border);
+  background: var(--card);
+  color: var(--text);
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.toggle-btn:hover {
+  background: var(--accent);
+  color: white;
+  border-color: var(--accent);
+}
+
+/* Card */
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 36px 32px;
+  width: 300px;
+  text-align: center;
+  transition: all 0.4s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(108, 99, 255, 0.15);
+}
+
+/* Avatar circle */
+.avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: white;
+  font-size: 22px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+  transition: transform 0.3s ease;
+}
+
+.avatar:hover { transform: scale(1.1); }
+
+.name {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+
+.role {
+  font-size: 13px;
+  color: var(--muted);
+  margin-bottom: 18px;
+}
+
+/* Tags */
+.tags {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 22px;
+}
+
+.tags span {
+  background: var(--tag-bg);
+  color: var(--accent);
+  font-size: 12px;
+  padding: 4px 12px;
+  border-radius: 30px;
+  border: 1px solid var(--border);
+  transition: all 0.3s ease;
+}
+
+.tags span:hover {
+  background: var(--accent);
+  color: white;
+}
+
+/* Hire button */
+.hire-btn {
+  width: 100%;
+  padding: 12px;
+  border-radius: 12px;
+  border: none;
+  background: var(--accent);
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.hire-btn:hover {
+  opacity: 0.85;
+  transform: translateY(-2px);
+}
